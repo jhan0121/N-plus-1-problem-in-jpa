@@ -21,6 +21,9 @@ class JpaApplicationTests {
     @PersistenceContext
     Session session;
 
+    /**
+     * Owner와 Pet의 양방향 fetch 옵션을 EAGER로 설정 후 실행해주세요.
+     */
     @Test
     @Disabled
     void test() {
@@ -54,6 +57,9 @@ class JpaApplicationTests {
         }
     }
 
+    /**
+     * Owner와 Pet의 양방향 fetch 옵션을 LAZY로 설정 후 실행해주세요.
+     */
     @Test
     void testLazyLoadingNPlus1Problem() {
         // Create 10 owners, each with 10 pets
@@ -106,6 +112,9 @@ class JpaApplicationTests {
         }
     }
 
+    /**
+     * OwnerRepository에 대한 N + 1 문제 해결 방법 코드 입니다.
+     */
     @Test
     void testNPlus1ProblemSolutions() {
         // Create 10 owners, each with 10 pets
